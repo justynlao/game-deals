@@ -1,0 +1,51 @@
+/* The entire Card component */
+.card {
+  border-radius: 5%;
+  background-color: var(--bg-color-secondary);
+  box-shadow: var(--box-shadow-before);
+  cursor: pointer;
+
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--box-shadow-after);
+}
+
+/* The text section of the Card */
+.card_content {
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+}
+
+.card_title {
+  color: var(--text-color-primary);
+  font-family: inherit;
+}
+
+.card_desc {
+  color: var(--text-color-secondary);
+  font-family: inherit;
+}
+
+/* The price section within the Card Content */
+.price_tag {
+  display: flex;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.chip_savings {
+  background-color: var(--color-sale);
+  border-radius: 10% 0 0 10%;
+  font-size: 1rem;
+}
+
+.chip_price {
+  color: var(--text-color-primary);
+  background-color: var(--bg-color-primary);
+  border-radius: 0 10% 10% 0;
+  font-size: 1rem;
+}
