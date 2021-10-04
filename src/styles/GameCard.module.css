@@ -13,6 +13,12 @@
   box-shadow: var(--box-shadow-after);
 }
 
+.card_media {
+    width: 100%;
+    height: auto;
+    aspect-ratio: attr(width) / attr(height);
+}
+
 /* The text section of the Card */
 .card_content {
   font-family: var(--font-family);
@@ -23,6 +29,9 @@
 .card_title {
   color: var(--text-color-primary);
   font-family: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .card_desc {

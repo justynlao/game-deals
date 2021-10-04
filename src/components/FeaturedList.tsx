@@ -10,7 +10,7 @@ interface Game {
   normalPrice: string;
   salePrice: string;
   savings: string;
-  thumb: string;
+  steamAppID: string;
 }
 
 interface FeaturedListProps {
@@ -26,7 +26,7 @@ const FeaturedList = ({ featuredGames }: FeaturedListProps) => {
           normalPrice: normalPrice,
           salePrice: salePrice,
           savings: savings,
-          thumb: thumb,
+          steamAppID: steamAppID,
         }: Game = game;
         return (
           <GameCard
@@ -35,7 +35,7 @@ const FeaturedList = ({ featuredGames }: FeaturedListProps) => {
             normalPrice={normalPrice}
             salePrice={salePrice}
             savings={savings}
-            thumb={thumb}
+            steamAppID={steamAppID}
           />
         );
       })}
