@@ -9,18 +9,18 @@ const Navbar = () => {
       <Link href="/" passHref>
         <div className={styles.nav_logo}>
           <SportsEsports color="inherit" fontSize="large" />
-          <div className={styles.nav_logo_label}>Dyno Deals</div>
+          <a className={styles.nav_logo_label}>Dyno Deals</a>
         </div>
       </Link>
       <div className={styles.nav_links}>
         <Link href="/" passHref>
-          <div className={styles.nav_link}>Deals</div>
+          <a className={styles.nav_link}>Deals</a>
         </Link>
         <Link href="/" passHref>
-          <div className={styles.nav_link}>Favorites</div>
+          <a className={styles.nav_link}>Favorites</a>
         </Link>
         <Link href="/" passHref>
-          <div className={styles.nav_link}>Login</div>
+          <a className={styles.nav_link}>Login</a>
         </Link>
       </div>
     </nav>
