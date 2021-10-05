@@ -7,10 +7,10 @@ import styles from '../styles/FeaturedList.module.css'
 
 interface Game {
   title: string;
-  normalPrice: string;
   salePrice: string;
   savings: string;
   steamAppID: string;
+  thumb: string;
 }
 
 interface FeaturedListProps {
@@ -23,19 +23,19 @@ const FeaturedList = ({ featuredGames }: FeaturedListProps) => {
       {featuredGames.map((game, index) => {
         const {
           title: title,
-          normalPrice: normalPrice,
           salePrice: salePrice,
           savings: savings,
           steamAppID: steamAppID,
+          thumb: thumb
         }: Game = game;
         return (
           <GameCard
             key={index}
             title={title}
-            normalPrice={normalPrice}
             salePrice={salePrice}
             savings={savings}
             steamAppID={steamAppID}
+            thumb={thumb}
           />
         );
       })}

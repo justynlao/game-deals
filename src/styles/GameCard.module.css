@@ -3,9 +3,8 @@
   border-radius: 5%;
   background-color: var(--bg-color-secondary);
   box-shadow: var(--box-shadow-before);
-  cursor: pointer;
 
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .card:hover {
@@ -13,10 +12,12 @@
   box-shadow: var(--box-shadow-after);
 }
 
+/* The image section of the Card */
 .card_media {
-    width: 100%;
-    height: auto;
-    aspect-ratio: attr(width) / attr(height);
+  width: 100%;
+  height: 215px;
+  aspect-ratio: attr(width) / attr(height);
+  cursor: pointer;
 }
 
 /* The text section of the Card */
@@ -32,6 +33,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .card_desc {
@@ -39,22 +41,40 @@
   font-family: inherit;
 }
 
-/* The price section within the Card Content */
-.price_tag {
+/* The add/price section within the Card Content */
+.actions {
   display: flex;
-  align-self: flex-end;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 10px;
+  font-size: 1.25rem;
+}
+
+.add {
+  color: var(--text-color-primary);
+  background-color: var(--color-regular);
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.add:hover {
+  color: var(--color-regular);
+  background-color: var(--text-color-primary);
 }
 
 .chip_savings {
   background-color: var(--color-sale);
   border-radius: 10% 0 0 10%;
-  font-size: 1rem;
+  font-size: inherit;
+  font-family: var(--font-family);
 }
 
 .chip_price {
   color: var(--text-color-primary);
   background-color: var(--bg-color-primary);
   border-radius: 0 10% 10% 0;
-  font-size: 1rem;
+  font-size: inherit;
+  font-family: var(--font-family);
 }

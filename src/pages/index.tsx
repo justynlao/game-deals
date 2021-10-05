@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   const getFeaturedData = async () => {
     const resp = await axios.get(
-      "https://www.cheapshark.com/api/1.0/deals?pageSize=12&storeID=1"
+      "https://www.cheapshark.com/api/1.0/deals?storeID=1,3,7,11"
     );
     setFeaturedGames([...resp.data]);
   };
