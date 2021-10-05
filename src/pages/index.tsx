@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import FeaturedList from "../components/FeaturedList";
+import FeaturedList from "../components/FeaturedList/FeaturedList";
 
 import styles from "../styles/Home.module.css";
 

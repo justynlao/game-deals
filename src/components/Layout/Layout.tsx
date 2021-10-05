@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar/Navbar";
 
-import styles from "../styles/Layout.module.css";
+import styles from "./Layout.module.css";
 
 interface LayoutProps {
   children: any;

@@ -1,9 +1,9 @@
 import { Title } from "@mui/icons-material";
 import { useState } from "react";
 
-import GameCard from "./GameCard";
+import GameCard from "../GameCard/GameCard";
 
-import styles from '../styles/FeaturedList.module.css'
+import styles from './FeaturedList.module.css'
 
 interface Game {
   title: string;

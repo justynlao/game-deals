@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SportsEsports } from "@mui/icons-material";
 
-import styles from "../styles/Navbar.module.css";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
@@ -13,8 +13,8 @@ const Navbar = () => {
         </div>
       </Link>
       <div className={styles.nav_links}>
-        <Link href="/" passHref>
-          <a className={styles.nav_link}>Deals</a>
+        <Link href="/games" passHref>
+          <a className={styles.nav_link}>Games</a>
         </Link>
         <Link href="/" passHref>
           <a className={styles.nav_link}>Favorites</a>

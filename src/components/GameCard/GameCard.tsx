@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { Add } from "@mui/icons-material";
 
-import styles from "../styles/GameCard.module.css";
+import styles from "./GameCard.module.css";
 
 interface GameCardProps {
   title: string;
