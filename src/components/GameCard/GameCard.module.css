@@ -3,7 +3,7 @@
   border-radius: 5%;
   background-color: var(--bg-color-secondary);
   box-shadow: var(--box-shadow-before);
-
+  cursor: pointer;
   transition: all 0.5s ease;
 }
 
@@ -17,7 +17,6 @@
   width: 100%;
   height: 215px;
   aspect-ratio: attr(width) / attr(height);
-  cursor: pointer;
 }
 
 /* The text section of the Card */
@@ -33,7 +32,6 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  cursor: pointer;
 }
 
 .card_desc {
@@ -55,7 +53,6 @@
   background-color: var(--color-regular);
   border-radius: 50%;
   font-size: 2rem;
-  cursor: pointer;
   transition: all 0.5s ease;
 }
 
