@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  color: var(--text-color-primary);
+  background-color: var(--bg-color-secondary);
+  width: 460px;
+  border-radius: 5%;
+}
