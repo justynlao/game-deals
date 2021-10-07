@@ -1,6 +1,10 @@
+/* Component Imports */
 import Link from "next/link";
+
+/* UI Imports */
 import { SportsEsports } from "@mui/icons-material";
 
+/* Style Imports */
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {

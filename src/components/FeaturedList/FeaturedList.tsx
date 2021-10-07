@@ -1,39 +1,35 @@
-import { Title } from "@mui/icons-material";
-import { useState } from "react";
-
+/* Component Imports */
 import GameCard from "../GameCard/GameCard";
 
-import styles from './FeaturedList.module.css'
+/* Type Imports */
+import { DealInfoType } from "../../types/deal-info";
 
-interface Game {
-  title: string;
-  salePrice: string;
-  savings: string;
-  steamAppID: string;
-  thumb: string;
-}
+/* Style Imports */
+import styles from "./FeaturedList.module.css";
 
 interface FeaturedListProps {
-  featuredGames: Game[];
+  featuredGames: DealInfoType[];
 }
 
 const FeaturedList = ({ featuredGames }: FeaturedListProps) => {
   return (
     <div className={styles.featured_container}>
-      {featuredGames.map((game, index) => {
+      {featuredGames.map((game: DealInfoType, index: number) => {
         const {
           title: title,
           salePrice: salePrice,
           savings: savings,
+          gameID: gameID,
           steamAppID: steamAppID,
-          thumb: thumb
-        }: Game = game;
+          thumb: thumb,
+        }: DealInfoType = game;
         return (
           <GameCard
             key={index}
             title={title}
             salePrice={salePrice}
             savings={savings}
+            gameID={gameID}
             steamAppID={steamAppID}
             thumb={thumb}
           />

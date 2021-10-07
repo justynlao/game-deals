@@ -1,8 +1,13 @@
-import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
-import axios from "axios";
-
+/* Component Imports */
 import FeaturedList from "../components/FeaturedList/FeaturedList";
 
+/* Library Imports */
+import axios from "axios";
+
+/* Type Imports */
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+
+/* Style Imports */
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = ({
@@ -26,7 +31,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       games,
     },
-    revalidate: 60 * 60 * 24,
   };
 };
 

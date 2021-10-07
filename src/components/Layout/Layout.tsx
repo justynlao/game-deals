@@ -1,6 +1,8 @@
+/* Component Imports */
 import Head from "next/head";
 import Navbar from "../Navbar/Navbar";
 
+/* Style Imports */
 import styles from "./Layout.module.css";
 
 interface LayoutProps {
