@@ -1,21 +1,21 @@
-export interface GameInfo {
+export interface GameInfoType {
   info: Info;
   cheapestPriceEver: CheapestPrice;
   deals: StoreInfo[];
 }
 
-interface Info {
+export interface Info {
   title: string;
   steamAppID: string;
   thumb: string;
 }
 
-interface CheapestPrice {
+export interface CheapestPrice {
   price: string;
   date: number;
 }
 
-interface StoreInfo {
+export interface StoreInfo {
   storeID: string;
   price: string;
   retailPrice: string;

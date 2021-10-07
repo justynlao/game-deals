@@ -1,4 +1,4 @@
-export interface DealInfo {
+export interface DealInfoType {
   title: string;
   salePrice: string;
   savings: string;
