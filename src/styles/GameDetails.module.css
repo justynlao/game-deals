@@ -1,7 +1,10 @@
 .main {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  margin-top: 6rem;
-  margin-bottom: 1rem;
-  padding: 0 15rem;
+  margin: 6rem auto 1rem;
+}
+
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: auto 1fr;
+  }
 }

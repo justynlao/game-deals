@@ -5,6 +5,7 @@
   box-shadow: var(--box-shadow-before);
   cursor: pointer;
   transition: all 0.5s ease;
+  place-self: center;
 }
 
 .card:hover {
