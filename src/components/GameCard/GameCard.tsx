@@ -17,14 +17,7 @@ interface GameCardProps {
   thumb: string;
 }
 
-const GameCard = ({
-  title,
-  salePrice,
-  savings,
-  gameID,
-  steamAppID,
-  thumb,
-}: GameCardProps) => {
+const GameCard = ({ title, salePrice, savings, gameID, steamAppID, thumb }: GameCardProps) => {
   savings = `-${Math.round(+savings).toString()}%`;
   salePrice = "$" + salePrice;
   const thumbnail = `https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg`;

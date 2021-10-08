@@ -62,7 +62,7 @@
 }
 
 .chip_savings {
-  background-color: var(--color-sale);
+  background-color: var(--color-savings);
   border-radius: 10% 0 0 10%;
   font-size: inherit;
   font-family: var(--font-family);
