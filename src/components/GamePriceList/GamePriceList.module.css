@@ -1,0 +1,47 @@
+.list_container {
+  margin: 0;
+  padding: 10px;
+}
+
+.list_item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color-primary);
+  font-family: var(--font-family);
+  padding: 10px;
+  margin-bottom: 5px;
+  box-shadow: var(--box-shadow-before);
+  transition: .25s;
+  text-decoration: none;
+}
+
+.list_item:hover {
+  background-color: var(--bg-color-secondary) 0.5;
+}
+
+.store_name {
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.chip_prices {
+  margin-left: auto;
+  font-size: 1.25rem;
+}
+
+.chip_sale {
+  color: var(--text-color-primary);
+  background-color: var(--bg-color-primary);
+  border-radius: 0 10% 10% 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.chip_savings {
+  background-color: var(--color-savings);
+  border-radius: 10% 0 0 10%;
+  font-family: inherit;
+  font-size: inherit;
+}
