@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { AttachMoney, MoneyOff, Star, ThumbUp, Face, AddCircleOutline } from "@mui/icons-material";
+import { Button, Card, Typography } from "@mui/material";
 
 import { CheapestPrice } from "../../types/game-info";
 import { DealInfoType } from "../../types/deal-info";
@@ -25,14 +27,27 @@ const AdditionalDetails = ({ dealInfo, cheapestPrice }: AdditionalDetailsProps) 
   return (
     <div className={styles.details}>
       <Image className={styles.banner} src={img_url} alt="game banner" width="460" height="215" />
-      <h1 className={styles.header}>Details</h1>
+      <Button className={styles.button} variant="contained">
+        <AddCircleOutline sx={{ mr: 2 }} />
+        Add to Favorites
+      </Button>
       <ul className={styles.detail_list}>
-        <li>Retail Price: {normalPrice}</li>
-        <li>Lowest Price: {price}</li>
-        <li>Metacritic: {metacriticScore}</li>
-        <li>
-          {steamRatingText} {steamRatingPercent} {steamRatingCount}
-        </li>
+        <Card className={styles.info_card}>
+          <AttachMoney className={styles.icon} />
+          <Typography variant="h6">Retail: {`$${normalPrice}`}</Typography>
+        </Card>
+        <Card className={styles.info_card}>
+          <MoneyOff className={styles.icon} />
+          <Typography variant="h6">Lowest: {`$${price}`}</Typography>
+        </Card>
+        <Card className={styles.info_card}>
+          <ThumbUp className={styles.icon} />
+          <Typography variant="h6">Rating: {`${steamRatingPercent}%`}</Typography>
+        </Card>
+        <Card className={styles.info_card}>
+          <Face className={styles.icon} />
+          <Typography variant="h6">#Ratings: {steamRatingCount}</Typography>
+        </Card>
       </ul>
     </div>
   );
