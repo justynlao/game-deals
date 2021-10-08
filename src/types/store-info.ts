@@ -5,5 +5,5 @@ export interface StoreInfoType {
 export interface Store {
     storeID: string;
     storeName: string;
-    images: {banner: string}
+    images: {banner: string, logo: string}
 }

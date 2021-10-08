@@ -17,6 +17,7 @@ export interface CheapestPrice {
 
 export interface StoreInfo {
   storeID: string;
+  dealID: string;
   price: string;
   retailPrice: string;
   savings: string;
