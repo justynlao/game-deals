@@ -1,26 +1,24 @@
 import Image from "next/image";
-import { AttachMoney, MoneyOff, Star, ThumbUp, Face, AddCircleOutline } from "@mui/icons-material";
+import { AttachMoney, MoneyOff, ThumbUp, Face, AddCircleOutline } from "@mui/icons-material";
 import { Button, Card, Typography } from "@mui/material";
 
 import { CheapestPrice } from "../../types/game-info";
-import { DealInfoType } from "../../types/deal-info";
+import { IndividualDealType } from "../../types/deal-info";
 
 import styles from "./AdditionalDetails.module.css";
 
 interface AdditionalDetailsProps {
-  dealInfo: DealInfoType[];
+  dealInfo: IndividualDealType;
   cheapestPrice: CheapestPrice;
 }
 
 const AdditionalDetails = ({ dealInfo, cheapestPrice }: AdditionalDetailsProps) => {
   const {
-    normalPrice: normalPrice,
+    retailPrice: retailPrice,
     steamAppID: steamAppID,
-    metacriticScore: metacriticScore,
-    steamRatingText: steamRatingText,
     steamRatingPercent: steamRatingPercent,
     steamRatingCount: steamRatingCount,
-  } = dealInfo[0];
+  } = dealInfo.gameInfo;
   const { price } = cheapestPrice;
   const img_url = `https://cdn.cloudflare.steamstatic.com/steam/apps/${steamAppID}/header.jpg`;
 
@@ -34,7 +32,7 @@ const AdditionalDetails = ({ dealInfo, cheapestPrice }: AdditionalDetailsProps) 
       <ul className={styles.detail_list}>
         <Card className={styles.info_card}>
           <AttachMoney className={styles.icon} />
-          <Typography variant="h6">Retail: {`$${normalPrice}`}</Typography>
+          <Typography variant="h6">Retail: {`$${retailPrice}`}</Typography>
         </Card>
         <Card className={styles.info_card}>
           <MoneyOff className={styles.icon} />
@@ -42,11 +40,15 @@ const AdditionalDetails = ({ dealInfo, cheapestPrice }: AdditionalDetailsProps) 
         </Card>
         <Card className={styles.info_card}>
           <ThumbUp className={styles.icon} />
-          <Typography variant="h6">Rating: {`${steamRatingPercent}%`}</Typography>
+          <Typography variant="h6">
+            Rating: {steamRatingPercent === "0" ? "None" : `${steamRatingPercent}%`}
+          </Typography>
         </Card>
         <Card className={styles.info_card}>
           <Face className={styles.icon} />
-          <Typography variant="h6">#Ratings: {steamRatingCount}</Typography>
+          <Typography variant="h6">
+            #Ratings: {steamRatingCount === "0" ? "None" : steamRatingCount}
+          </Typography>
         </Card>
       </ul>
     </div>

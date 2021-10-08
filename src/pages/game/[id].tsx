@@ -10,7 +10,7 @@ import axios from "axios";
 import { NextPage, GetStaticProps, GetStaticPaths, InferGetStaticPropsType } from "next";
 import { GameInfoType } from "../../types/game-info";
 import { StoreInfoType } from "../../types/store-info";
-import { DealInfoType } from "../../types/deal-info";
+import { DealInfoType, IndividualDealType } from "../../types/deal-info";
 
 /* Style Imports */
 import styles from "../../styles/GameDetails.module.css";
@@ -44,9 +44,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const res2 = await axios.get("https://www.cheapshark.com/api/1.0/stores");
   const storeInfo: StoreInfoType = res2.data;
 
-  const steamID = gameInfo.info.steamAppID;
-  const res3 = await axios.get(`https://www.cheapshark.com/api/1.0/deals?steamAppID=${steamID}`);
-  const dealInfo: DealInfoType[] = res3.data;
+  const dealID = gameInfo.deals[0].dealID;
+  const res3 = await axios.get(`https://www.cheapshark.com/api/1.0/deals?id=${dealID}`);
+  const dealInfo: IndividualDealType = res3.data;
 
   return {
     props: {
@@ -54,6 +54,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       storeInfo,
       dealInfo,
     },
+    revalidate: 60 * 60 * 24,
   };
 };
 
