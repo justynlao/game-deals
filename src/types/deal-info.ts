@@ -12,3 +12,14 @@ export interface DealInfoType {
   steamRatingPercent: string;
   steamRatingCount: string;
 }
+
+export interface IndividualDealType {
+  gameInfo: IndividualGameInfo;
+}
+
+export interface IndividualGameInfo {
+  steamAppID: string;
+  retailPrice: string;
+  steamRatingPercent: string;
+  steamRatingCount: string;
+}
